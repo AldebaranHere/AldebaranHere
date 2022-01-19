@@ -1,0 +1,31 @@
+# An Algorithm for Converting Scales of Temperature between Celsius, Fahrenheit, Kelvin, and Reaumur
+
+# You can put in any integer for the inputs. The constants must stay the same.
+reaumur_input = 1
+fahrenheit_input = 41
+celsius_input = 0
+kelvin_input = 373.15
+constant_fahrenheit = 32
+constant_kelvin = 273.15
+
+# These are the functions convert from Celsius to the other 3
+celsius_to_fahrenheit = ((9 * celsius_input) / 5) + constant_fahrenheit
+celsius_to_reaumur = (celsius_input * (4 / 5))
+celsius_to_kelvin = (celsius_input + constant_kelvin)
+
+# These are the functions convert from Fahrenheit to the other 3
+fahrenheit_to_celsius = ((fahrenheit_input - constant_fahrenheit) * 5) / 9
+fahrenheit_to_reaumur = (4 * (fahrenheit_input - constant_fahrenheit)) / 9
+fahrenheit_to_kelvin = ((5 * (fahrenheit_input - constant_fahrenheit)) / 9) + constant_kelvin
+
+# These are the functions convert from Kelvin to the other 3
+kelvin_to_celsius = (kelvin_input - constant_kelvin)
+kelvin_to_fahrenheit = ((9 * (kelvin_input - constant_kelvin)) / 5) + constant_fahrenheit
+kelvin_to_reaumur = (4 * (kelvin_input - constant_kelvin)) / 5
+
+# These are the functions convert from Reaumur to the other 3
+reaumur_to_celsius = (reaumur_input * (5 / 4))
+reaumur_to_fahrenheit = (9 * reaumur_input) / 4 + constant_fahrenheit
+reaumur_to_kelvin = (reaumur_input * (5 / 4)) + constant_kelvin
+
+print({insert whichever function you want from the code})
