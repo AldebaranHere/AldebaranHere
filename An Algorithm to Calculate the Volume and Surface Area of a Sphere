@@ -1,5 +1,5 @@
 # An Algorithm to Calculate the Volume and Surface Area of a Sphere
-pi = 3.1415926535897932384626433
+pi = 3.141592653589793238462643383279502884
 r = int(input("Enter the value of the radius. (Press the enter button after inputting the value)."))
 constant_sphere_volume = csv = 4 / 3
 constant_sphere_surface_area = cssa = 4
