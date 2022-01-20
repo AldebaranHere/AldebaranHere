@@ -1,5 +1,5 @@
 # An Algorithm to Calculate the Area and Circumference of a Circle
-pi = 3.1415926535897932384626433
+pi = 3.141592653589793238462643383279502884
 r = int(input("Enter the value of the radius. (Press the enter button after inputting the value)."))
 d = 2 * r
 area_of_the_circle = pi * (r ** 2)
