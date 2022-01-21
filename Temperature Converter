@@ -1,31 +1,87 @@
-# An Algorithm for Converting Scales of Temperature between Celsius, Fahrenheit, Kelvin, and Reaumur
+# An Algorithm for Converting Scales of Temperature between Celsius, Fahrenheit, Kelvin, Rankine, Delisle, Newton, Réaumur, and Rømer
 
-# You can put in any integer for the inputs. The constants must stay the same.
-reaumur_input = 1
-fahrenheit_input = 41
-celsius_input = 0
-kelvin_input = 373.15
-constant_fahrenheit = 32
-constant_kelvin = 273.15
+# Source of functions: https://en.wikipedia.org/wiki/Conversion_of_scales_of_temperature
 
-# These are the functions convert from Celsius to the other 3
-celsius_to_fahrenheit = ((9 * celsius_input) / 5) + constant_fahrenheit
-celsius_to_reaumur = (celsius_input * (4 / 5))
-celsius_to_kelvin = (celsius_input + constant_kelvin)
+# You can put in any integer for the inputs. 
+celsius_input = 40
+fahrenheit_input = 104
+kelvin_input = 313.15
+rankine_input = 563.67
+delisle_input = 90
+newton_input = 13.2
+réaumur_input = 32
+rømer_input = 28.5
 
-# These are the functions convert from Fahrenheit to the other 3
-fahrenheit_to_celsius = ((fahrenheit_input - constant_fahrenheit) * 5) / 9
-fahrenheit_to_reaumur = (4 * (fahrenheit_input - constant_fahrenheit)) / 9
-fahrenheit_to_kelvin = ((5 * (fahrenheit_input - constant_fahrenheit)) / 9) + constant_kelvin
+# These are conversions from Celsius to the other scales of temperature
+celsius_to_fahrenheit = ((9 * celsius_input) / 5) + 32
+celsius_to_kelvin = (celsius_input + 273.15)
+celsius_to_rankine = (9 * (celsius_input + 273.15)) / 5
+celsius_to_delisle = (3 * (100 - celsius_input)) / 2
+celsius_to_newton = (33 * celsius_input) / 100
+celsius_to_réaumur = (4 * celsius_input) / 5
+celsius_to_rømer = ((21 * celsius_input) / 40) + 7.5
 
-# These are the functions convert from Kelvin to the other 3
-kelvin_to_celsius = (kelvin_input - constant_kelvin)
-kelvin_to_fahrenheit = ((9 * (kelvin_input - constant_kelvin)) / 5) + constant_fahrenheit
-kelvin_to_reaumur = (4 * (kelvin_input - constant_kelvin)) / 5
+# These are conversions from Fahrenheit to the other scales of temperature
+fahrenheit_to_celsius = (5 * (fahrenheit_input - 32) / 9)
+fahrenheit_to_kelvin = (5 * (fahrenheit_input + 459.67) / 9)
+fahrenheit_to_rankine = fahrenheit_input + 459.67
+fahrenheit_to_delisle = (5 * (212 - fahrenheit_input) / 6)
+fahrenheit_to_newton = (11 * (fahrenheit_input - 32) / 60)
+fahrenheit_to_réaumur = ((4 * (fahrenheit_input - 32)) / 9)
+fahrenheit_to_rømer = ((7 * (fahrenheit_input - 32)) / 24) + 7.5
 
-# These are the functions convert from Reaumur to the other 3
-reaumur_to_celsius = (reaumur_input * (5 / 4))
-reaumur_to_fahrenheit = (9 * reaumur_input) / 4 + constant_fahrenheit
-reaumur_to_kelvin = (reaumur_input * (5 / 4)) + constant_kelvin
+# These are conversions from Kelvin to the other scales of temperature
+kelvin_to_celsius = kelvin_input - 273.15
+kelvin_to_fahrenheit = ((9 * kelvin_input) / 5) - 459.67
+kelvin_to_rankine = (9 * kelvin_input) / 5
+kelvin_to_delisle = (3 * (373.15 - kelvin_input)) / 2
+kelvin_to_newton = (33 * (kelvin_input - 273.15)) / 100
+kelvin_to_réaumur = (4 * (kelvin_input - 273.15)) / 5
+kelvin_to_rømer = ((21 * (kelvin_input - 273.15)) / 40) + 7.5
 
-print({insert whichever function you want from the code})
+# These are conversions from Rankine to the other scales of temperature
+rankine_to_celcius = ((5 * (rankine_input - 491.67)) / 9)
+rankine_to_fahrenheit = rankine_input - 459.67
+rankine_to_kelvin = (5 * rankine_input) / 9
+rankine_to_delisle = ((5 * (671.67 - rankine_input)) / 6)
+rankine_to_newton = ((11 * (rankine_input - 491.67)) / 60)
+rankine_to_réaumur = ((4 * (rankine_input - 491.67)) / 9)
+rankine_to_rømer = ((7 * (rankine_input - 491.67)) / 24) + 7.5
+
+# These are conversions from Delisle to the other scales of temperature
+delisle_to_celcius = 100 - ((2 * delisle_input) / 3)
+delisle_to_fahrenheit = 212 - ((6 * delisle_input) / 5)
+delisle_to_kelvin = 373.15 - ((2 * delisle_input) / 3)
+delisle_to_rankine = 671.67 - ((6 * delisle_input) / 5)
+delisle_to_newton = 33 - ((11 * delisle_input) / 50)
+delisle_to_réaumur = 80 - ((8 * delisle_input) / 15)
+delisle_to_rømer = 60 - ((7 * delisle_input) / 20)
+
+# These are conversions from Newton to the other scales of temperature
+newton_to_celsius = ((100 * newton_input) / 33)
+newton_to_fahrenheit = ((60 * newton_input) / 11) + 32
+newton_to_kelvin = ((100 * newton_input) / 33) + 273.15
+newton_to_rankine = ((60 * newton_input) / 11) + 491.67
+newton_to_delisle = ((50 * (33 - newton_input)) / 11)
+newton_to_réaumur = ((80 * newton_input) / 33)
+newton_to_rømer = ((35 * newton_input) / 22) + 7.5
+
+# These are conversions from Réaumur to the other scales of temperature
+réaumur_to_celsius = ((5 * réaumur_input) / 4)
+réaumur_to_fahrenheit = ((9 * réaumur_input) / 4) + 32
+réaumur_to_kelvin = ((5 * réaumur_input) / 4) + 273.15
+réaumur_to_rankine = ((9 * réaumur_input) / 4) + 491.67
+réaumur_to_delisle = ((15 * (80 - réaumur_input)) / 8)
+réaumur_to_newton = ((33 * réaumur_input) / 80)
+réaumur_to_rømer = ((21 * réaumur_input) / 32) + 7.5
+
+# These are conversions from Rømer to the other scales of temperature
+rømer_to_celsius = ((40 * (rømer_input - 7.5)) / 21)
+rømer_to_fahrenheit = ((24 * (rømer_input - 7.5)) / 7) + 32
+rømer_to_kelvin = ((40 * (rømer_input - 7.5)) / 21) + 273.15
+rømer_to_rankine = ((24 * (rømer_input - 7.5)) / 7) + 491.67
+rømer_to_delisle = ((20 * (60 - rømer_input)) / 7)
+rømer_to_newton = ((22 * (rømer_input - 7.5)) / 35)
+rømer_to_réaumur = ((32 * (rømer_input - 7.5)) / 21)
+
+print()
