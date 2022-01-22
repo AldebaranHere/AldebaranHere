@@ -1,6 +1,5 @@
 # An Algorithm for Converting Scales of Temperature between Celsius, Fahrenheit, Kelvin, Rankine, Delisle, Newton, Réaumur, and Rømer
 # Source of functions: https://en.wikipedia.org/wiki/Conversion_of_scales_of_temperature
-
 print("Choose a scale of temperature to convert from.")
 convert_from = float(input("Enter 1 for Celsius. 2 for Fahrenheit. 3 For Kelvin. 4 for Rankine. 5 for Delisle. 6 for Newton. 7 for Réaumur. 8 for Rømer. Press enter after inputting the value."))
 if convert_from == 1:
